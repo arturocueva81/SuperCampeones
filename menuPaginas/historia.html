@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historia - FIFA World Cup</title>
+  <link rel="stylesheet" href="historia.css" />
+</head>
+<body>
+
+  <header>
+    <a href="../index.html" class="btn-volver">← Volver al inicio</a>
+    <h1>🏆 Historia del Mundial FIFA</h1>
+    <p class="subtitulo">Desde Uruguay 1930 hasta nuestros días</p>
+  </header>
+
+  <main>
+
+    <section class="descripcion-section">
+      <div class="descripcion-texto">
+        <h2>El torneo más grande del mundo</h2>
+        <p>
+          La Copa Mundial de la FIFA es el torneo de fútbol más importante del planeta.
+          Se celebra cada cuatro años y reúne a las mejores selecciones nacionales del mundo.
+        </p>
+        <p>
+          Desde su primera edición en <strong>Uruguay en 1930</strong>, el torneo ha
+          crecido de 13 a 48 selecciones participantes.
+        </p>
+        <div class="stats-row">
+          <div class="stat"><span class="stat-num">23</span><span class="stat-label">Ediciones</span></div>
+          <div class="stat"><span class="stat-num">48</span><span class="stat-label">Equipos 2026</span></div>
+          <div class="stat"><span class="stat-num">8</span><span class="stat-label">Campeones</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">Títulos Brasil</span></div>
+        </div>
+      </div>
+      <div class="descripcion-imagen">
+        <img src="../images/copas.jpg" alt="Copas del Mundo FIFA" class="img-copas"/>
+        <p class="img-caption">El trofeo más codiciado del fútbol</p>
+      </div>
+    </section>
+
+    <section class="tabla-section">
+      <h2>📋 Ediciones del Mundial</h2>
+      <table id="tablaHistoria">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Año</th>
+            <th>País Sede</th>
+            <th>Campeón</th>
+            <th>Logo</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+          <!-- Filas generadas por JS -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>SuperCampeones © 2026 | Taller Mundialista</p>
+  </footer>
+
+  <script src="historia.js"></script>
+</body>
+</html>
