@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FIFA World Cup 2026 - Grupo I</title>
+  <link rel="stylesheet" href="grupo_i.css" />
 </head>
 <body>
-    
+
+  <header>
+    <h1>🏆 FIFA World Cup 2026</h1>
+    <h2>Grupo I</h2>
+  </header>
+
+  <main>
+    <section class="grupo-container">
+
+      <div class="equipo-card" data-equipo="Francia">
+        <img src="../img/banderaFrancia.jpg" alt="Bandera Francia" />
+        <h3>Francia</h3>
+        <span class="badge">UEFA</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="Senegal">
+        <img src="../img/banderaSenegal.jpg" alt="Bandera Senegal" />
+        <h3>Senegal</h3>
+        <span class="badge">CAF</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="Irak">
+        <img src="../img/banderaIrak.jpg" alt="Bandera Irak" />
+        <h3>Irak</h3>
+        <span class="badge">AFC</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="Noruega">
+        <img src="../img/banderaNoruega.jpg" alt="Bandera Noruega" />
+        <h3>Noruega</h3>
+        <span class="badge">UEFA</span>
+      </div>
+
+    </section>
+
+    <div id="info-panel" class="info-panel oculto">
+      <p id="info-texto"></p>
+      <button onclick="cerrarPanel()">✖ Cerrar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>SuperCampeones © 2026 | Taller Mundialista</p>
+  </footer>
+
+  <script src="grupo_i.js"></script>
 </body>
 </html>
