@@ -2,7 +2,7 @@
     {
         id: "A",
         carpeta: "Grupo_A",
-        paginaGrupo: "grupo_a.html",
+        paginaGrupo: "grupoA.html",
         paises: [
         { nombre: "MÉXICO", pagina: "mexico.html", cod: "mx" },
         { nombre: "SUDÁFRICA", pagina: "sudafrica.html", cod: "za" },
@@ -13,7 +13,7 @@
     {
         id: "B",
         carpeta: "Grupo_B",
-        paginaGrupo: "grupo_b.html",
+        paginaGrupo: "grupo.html",
         paises: [
         { nombre: "CANADÁ", pagina: "canada.html", cod: "ca" },
         { nombre: "BOSNIA", pagina: "bosnia.html", cod: "ba" },
@@ -24,7 +24,7 @@
     {
         id: "C",
         carpeta: "Grupo_C",
-        paginaGrupo: "grupo_c.html",
+        paginaGrupo: "grupoC.html",
         paises: [
         { nombre: "BRASIL", pagina: "brasil.html", cod: "br" },
         { nombre: "MARRUECOS", pagina: "marruecos.html", cod: "ma" },
@@ -46,7 +46,7 @@
     {
         id: "E",
         carpeta: "Grupo_E",
-        paginaGrupo: "Grupo_E.html",
+        paginaGrupo: "grupoE.html",
         paises: [
         { nombre: "ALEMANIA", pagina: "alemania.html", cod: "de" },
         { nombre: "CURAZAO", pagina: "curazao.html", cod: "cw" },
@@ -89,8 +89,8 @@
     },
     {
         id: "I",
-        carpeta: "grupo_i",
-        paginaGrupo: "grupo_i.html",
+        carpeta: "Grupo_I",
+        paginaGrupo: "grupoI.html",
         paises: [
         { nombre: "FRANCIA", pagina: "francia.html", cod: "fr" },
         { nombre: "SENEGAL", pagina: "senegal.html", cod: "sn" },
@@ -101,7 +101,7 @@
     {
         id: "J",
         carpeta: "Grupo_J",
-        paginaGrupo: "grupo_j.html",
+        paginaGrupo: "grupoJ.html",
         paises: [
         { nombre: "ARGENTINA", pagina: "argentina.html", cod: "ar" },
         { nombre: "ARGELIA", pagina: "argelia.html", cod: "dz" },
@@ -111,7 +111,7 @@
     },
     {
         id: "K",
-        carpeta: "grupo_K",
+        carpeta: "Grupo_K",
         paginaGrupo: "grupoK.html",
         paises: [
         { nombre: "PORTUGAL", pagina: "portugal.html", cod: "pt" },
@@ -145,13 +145,13 @@
 
         htmlPaises += "<li>";
         htmlPaises += "<img src='https://flagcdn.com/w40/" + pais.cod + ".png' alt='" + pais.nombre + "'>";
-        htmlPaises += "<a href='../" + grupo.carpeta + "/paginas/" + pais.pagina + "'>" + pais.nombre + "</a>";
+        htmlPaises += "<a href='../../" + grupo.carpeta + "/paginas/" + pais.pagina + "'>" + pais.nombre + "</a>";
         htmlPaises += "</li>";
     }
 
     htmlGrupos += "<div class='card-grupo'>";
     htmlGrupos += "<div class='card-header'>";
-    htmlGrupos += "<a href='../" + grupo.carpeta + "/paginas/" + grupo.paginaGrupo + "'>GRUPO " + grupo.id + "</a>";
+    htmlGrupos += "<a href='../../" + grupo.carpeta + "/paginas/" + grupo.paginaGrupo + "'>GRUPO " + grupo.id + "</a>";
     htmlGrupos += "</div>";
     htmlGrupos += "<ul class='lista-paises'>";
     htmlGrupos += htmlPaises;

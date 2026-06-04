@@ -1,9 +1,9 @@
 // Arreglo de objetos con las secciones del menú
 const TARJETAS = [
-  { nombre: "Historia",  ruta: "menuPaginas/historia.html",  lista: true  },
-  { nombre: "Estadios",  ruta: "menuPaginas/estadios.html",  lista: false },
-  { nombre: "Grupos",    ruta: "menuPaginas/grupos.html",    lista: true  },
-  { nombre: "Acerca de", ruta: "menuPaginas/acerca.html",    lista: false }
+  { nombre: "Historia",  ruta: "menuPaginas/historia/historia.html",  lista: true  },
+  { nombre: "Estadios",  ruta: "menuPaginas/estadios/estadios.html",  lista: false },
+  { nombre: "Grupos",    ruta: "menuPaginas/grupos/grupos.html",    lista: true  },
+  { nombre: "Acerca de", ruta: "menuPaginas/acerca/acerca.html",    lista: false }
 ];
 
 // Recorremos el arreglo para verificar qué páginas están listas

@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Historia - FIFA World Cup</title>
-  <link rel="stylesheet" href="historia.css" />
+  <link rel="stylesheet" href="../historia/historia.css" />
 </head>
 <body>
 
   <header>
-    <a href="../index.html" class="btn-volver">← Volver al inicio</a>
+    <a href="../../index.html" class="btn-volver">← Volver al inicio</a>
     <h1>🏆 Historia del Mundial FIFA</h1>
     <p class="subtitulo">Desde Uruguay 1930 hasta nuestros días</p>
   </header>
@@ -35,8 +35,8 @@
         </div>
       </div>
       <div class="descripcion-imagen">
-        <img src="../images/copas.jpg" alt="Copas del Mundo FIFA" class="img-copas"/>
-        <p class="img-caption">El trofeo más codiciado del fútbol</p>
+        <img src="../historia/copas.jpg" alt="Copas del Mundo FIFA" class="img-copas"/>
+        <p class="img-caption">La copa Jules Rimet (izq) se entregó desde 1930 hasta 1970.<br> Desde 1974 se entrega el nuevo trofeo FIFA(der)</p>
       </div>
     </section>
 
@@ -63,6 +63,16 @@
   <footer>
     <p>SuperCampeones © 2026 | Taller Mundialista</p>
   </footer>
+
+  <!-- Modal para ver logo ampliado -->
+  <div id="modal" class="modal-overlay">
+    <div class="modal-contenido">
+      <button id="modalCerrar" class="modal-cerrar">✕</button>
+      <img id="modalImg" src="" alt="Logo ampliado" class="modal-img">
+      <p id="modalTitulo" class="modal-titulo"></p>
+      <p id="modalCampeon" class="modal-campeon"></p>
+    </div>
+  </div>
 
   <script src="historia.js"></script>
 </body>

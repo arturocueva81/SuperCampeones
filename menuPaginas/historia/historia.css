@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #fff;
   min-height: 100vh;
-  background-image: url('../images/fondo.png');
+  background-image: url('../../images/fondo.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -213,7 +213,7 @@ footer {
 @media (max-width: 768px) {
   header h1 { font-size: 1.6rem; }
   .descripcion-section { flex-direction: column; align-items: center; }
-  .img-copas { width: 200px; }
+  .img-copas { width: 400px; }
 }
 
 @media (max-width: 480px) {
@@ -221,4 +221,71 @@ footer {
   .stat-num { font-size: 1.3rem; }
   tbody td { font-size: 0.78rem; padding: 8px 6px; }
   thead th { font-size: 0.72rem; padding: 10px 6px; }
+}
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.activo {
+  display: flex;
+}
+
+.modal-contenido {
+  background: #001a3d;
+  border: 2px solid rgba(245, 197, 24, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  max-width: 90vw;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #f5c518;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.modal-cerrar:hover {
+  color: #fff;
+}
+
+.modal-img {
+  max-width: 320px;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+.modal-titulo {
+  color: #18c1f5;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.modal-campeon {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+
+/* Cursor pointer en imágenes de la tabla */
+tbody img {
+  cursor: pointer;
 }

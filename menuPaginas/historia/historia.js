@@ -24,6 +24,7 @@ const EDICIONES = [
   { num: 23, anio: 2026, sede: "USA/CAN/MEX",  campeon: "Por definir",  logo: "2026.png" }
 ];
 
+// 1. Generar tabla
 let cuerpo = document.getElementById("cuerpoTabla");
 let html = "";
 
@@ -40,8 +41,41 @@ for (let i = 0; i < EDICIONES.length; i++) {
   html = html + "<td>" + ed.anio + "</td>";
   html = html + "<td>" + ed.sede + "</td>";
   html = html + "<td>" + ed.campeon + "</td>";
-  html = html + "<td><img src='../images/logos/" + ed.logo + "' alt='" + ed.anio + "'></td>";
+  html = html + "<td><img src='../../images/logos/" + ed.logo + "' alt='" + ed.anio + "' data-index='" + i + "'></td>";
   html = html + "</tr>";
 }
 
 cuerpo.innerHTML = html;
+
+// 2. Modal
+let modal = document.getElementById("modal");
+let modalImg = document.getElementById("modalImg");
+let modalTitulo = document.getElementById("modalTitulo");
+let modalCampeon = document.getElementById("modalCampeon");
+let modalCerrar = document.getElementById("modalCerrar");
+
+let imagenes = document.querySelectorAll("#cuerpoTabla img");
+
+for (let i = 0; i < imagenes.length; i++) {
+  imagenes[i].addEventListener("click", function() {
+    let idx = parseInt(this.getAttribute("data-index"));
+    let ed = EDICIONES[idx];
+
+    modalImg.src = this.src;
+    modalTitulo.textContent = ed.sede + " " + ed.anio;
+    modalCampeon.textContent="Campeon: " + ed.campeon;
+    modal.classList.add("activo");
+  });
+}
+
+modalCerrar.addEventListener("click", function() {
+  modal.classList.remove("activo");
+  modalImg.src = "";
+});
+
+modal.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    modal.classList.remove("activo");
+    modalImg.src = "";
+  }
+});
