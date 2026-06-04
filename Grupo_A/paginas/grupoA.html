@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FIFA World Cup 2026 - Grupo A</title>
+  <link rel="stylesheet" href="grupoA.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🏆 FIFA World Cup 2026</h1>
+    <h2>Grupo A</h2>
+  </header>
+
+  <main>
+    <section class="grupo-container">
+
+      <div class="equipo-card" data-equipo="Mexico">
+        <img src="../img/banderaMexico.png" alt="Bandera Mexico" />
+        <h3>Mexico</h3>
+        <span class="badge">CONCACAF</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="Corea">
+        <img src="../img/banderaCorea.png" alt="Bandera Corea" />
+        <h3>Corea</h3>
+        <span class="badge">AFC</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="Sudafrica">
+        <img src="../img/banderaSudafrica.png" alt="Bandera Sudafrica" />
+        <h3>Sudafrica</h3>
+        <span class="badge">CAF</span>
+      </div>
+
+      <div class="equipo-card" data-equipo="RepublicaCheca">
+        <img src="../img/banderaCheca.png" alt="Bandera Republica Checa" />
+        <h3>Republica Checa</h3>
+        <span class="badge">UEFA</span>
+      </div>
+
+    </section>
+
+    <div id="info-panel" class="info-panel oculto">
+      <p id="info-texto"></p>
+      <button onclick="cerrarPanel()">✖ Cerrar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>SuperCampeones © 2026 | Taller Mundialista</p>
+  </footer>
+
+  <script src="grupoA.js"></script>
+</body>
+</html>
