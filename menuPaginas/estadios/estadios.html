@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadios del Mundial | Junior Dev Project</title>
-    <link rel="stylesheet" href="estadios.css">
+
+    <title>Estadios Mundial 2026</title>
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
 
     <header>
-        <h1>🏟️ Estadios del Mundial</h1>
-        <p>Explorando las sedes de las selecciones clasificadas</p>
+
+        <a href="../../index.html" class="btn-volver">
+            ← Volver
+        </a>
+
+        <h1>Estadios Mundial 2026</h1>
+
     </header>
 
-    <main class="contenedor" id="contenedor-estadios">
-        </main>
+    <main>
+
+        <section class="info-formato">
+
+            <h2>Sedes Oficiales del Mundial</h2>
+
+            <p>
+                La Copa Mundial de la FIFA 2026 será organizada por
+                Estados Unidos, México y Canadá. El torneo contará
+                con 48 selecciones y se disputará en algunos de los
+                estadios más modernos e históricos del continente.
+            </p>
+
+        </section>
+
+        <section
+            id="contenedorEstadios"
+            class="grid-estadios">
+
+        </section>
+
+        <div id="modalEstadio" class="modal">
+
+            <div class="modal-contenido">
+
+                <span id="cerrarModal" class="cerrar">
+                    ✖
+                </span>
+
+                <img
+                    id="modalImagen"
+                    src=""
+                    alt=""
+                >
+
+                <h2 id="modalNombre"></h2>
+
+                <h3 id="modalCiudad"></h3>
+
+                <p id="modalDescripcion"></p>
+
+            </div>
+
+        </div>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 - Estadios del mundial</p>
+
+        <p>
+            FIFA World Cup 2026
+        </p>
+
     </footer>
 
     <script src="estadios.js"></script>
+
 </body>
+
 </html>
