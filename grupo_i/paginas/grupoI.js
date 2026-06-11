@@ -12,8 +12,19 @@ const texto = document.getElementById("info-texto");
 cards.forEach(card => {
   card.addEventListener("click", () => {
     const equipo = card.getAttribute("data-equipo");
-    texto.textContent = info[equipo];
-    panel.classList.remove("oculto");
+
+    if (equipo === "Francia") {
+      window.location.href = "francia.html";
+    } else if (equipo === "Senegal") {
+      window.location.href = "senegal.html";
+    } else if (equipo === "Irak") {
+      window.location.href = "irak.html";
+    } else if (equipo === "Noruega") {
+      window.location.href = "noruega.html";
+    } else {
+      texto.textContent = info[equipo];
+      panel.classList.remove("oculto");
+    }
   });
 });
 
