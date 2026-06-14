@@ -21,7 +21,7 @@ const equipos = [
     pagina: "uzbekistan.html"
   },
   {
-    nombre: "República Democrática del Congo",
+    nombre: "RD del Congo",
     bandera: "../img/banderaRdCongo.png",
     grupo: "Grupo K",
     descripcion: "República Democrática del Congo integra el Grupo K del Mundial 2026.",
@@ -42,7 +42,7 @@ equipos.forEach((equipo) => {
     <img src="${equipo.bandera}" alt="Bandera de ${equipo.nombre}">
     <h3>${equipo.nombre}</h3>
     <span class="badge">${equipo.grupo}</span>
-    <a href="${equipo.pagina}" class="btn-ficha">Ver ficha mundialista</a>
+    <a href="${equipo.pagina}" class="btn-ficha">Ver ficha</a>
   `;
 
   card.addEventListener("click", (evento) => {
