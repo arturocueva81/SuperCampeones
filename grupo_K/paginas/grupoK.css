@@ -67,7 +67,7 @@ main {
   height: 80px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   margin-bottom: 14px;
 }
 
@@ -90,7 +90,7 @@ main {
 .info-panel {
   margin-top: 30px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 20px 30px;
   text-align: center;
@@ -131,17 +131,36 @@ footer {
   margin-top: 20px;
 }
 
-    .btn-grupos {
-    display: inline-block;
-    margin-bottom: 20px;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 8px 20px;
-    border-radius: 30px;
-    }
+.btn-grupos {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 20px;
+  border-radius: 30px;
+}
 
-    .btn-grupos:hover {
-    background: #f5c518;
-    color: #000;
-    }
+.btn-grupos:hover {
+  background: #f5c518;
+  color: #000;
+}
+
+.btn-ficha {
+  display: inline-block;
+  margin-top: 14px;
+  text-decoration: none;
+  background: #f5c518;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.78rem;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn-ficha:hover {
+  background: #ffffff;
+  color: #000;
+  transform: translateY(-2px);
+}
