@@ -1,0 +1,484 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.equipo-page {
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(5, 14, 34, 0.88), rgba(5, 14, 34, 0.92)),
+    url("../../images/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.equipo-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(6, 18, 44, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.equipo-nav {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-brand {
+  color: #ffcc18;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a,
+.btn-volver {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.btn-volver:hover,
+.nav-links a.activo {
+  background: #ffcc18;
+  color: #06122c;
+  border-color: #ffcc18;
+}
+
+.equipo-hero {
+  width: min(1180px, 92%);
+  margin: 44px auto 26px;
+  min-height: 470px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.hero-info {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 40px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 204, 24, 0.22), transparent 32%),
+    linear-gradient(135deg, rgba(14, 38, 91, 0.96), rgba(5, 14, 34, 0.94));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+}
+
+.hero-info::after {
+  content: "K";
+  position: absolute;
+  right: 26px;
+  bottom: -44px;
+  font-size: 15rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.035);
+  line-height: 1;
+}
+
+.etiqueta-grupo {
+  display: inline-block;
+  background: rgba(255, 204, 24, 0.14);
+  border: 1px solid rgba(255, 204, 24, 0.45);
+  color: #ffcc18;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  font-size: 0.8rem;
+  margin-bottom: 22px;
+}
+
+.hero-info h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2.6rem, 5.2vw, 5.2rem);
+  line-height: 0.95;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.hero-info h1 span {
+  display: block;
+  color: #ffcc18;
+  font-size: clamp(2.2rem, 4.4vw, 4.4rem);
+}
+
+.hero-info p {
+  position: relative;
+  z-index: 1;
+  color: #dce6ff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.hero-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-principal,
+.btn-secundario {
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-weight: 900;
+  transition: 0.25s ease;
+}
+
+.btn-principal {
+  background: #ffcc18;
+  color: #06122c;
+}
+
+.btn-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(255, 204, 24, 0.25);
+}
+
+.btn-secundario {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn-secundario:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-visual {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 18px;
+}
+
+.bandera-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+}
+
+.bandera-card img {
+  width: min(330px, 85%);
+  border-radius: 22px;
+  border: 5px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.42);
+}
+
+.ranking-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stat-mini {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.stat-mini strong {
+  display: block;
+  color: #ffcc18;
+  font-size: 1.55rem;
+  margin-bottom: 4px;
+}
+
+.stat-mini span {
+  color: #cfd8ee;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.contenido-equipo {
+  width: min(1180px, 92%);
+  margin: 0 auto 60px;
+}
+
+.seccion-titulo {
+  margin: 46px 0 20px;
+}
+
+.seccion-titulo h2 {
+  color: #ffcc18;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.seccion-titulo p {
+  margin-top: 8px;
+  color: #cfd8ee;
+  line-height: 1.6;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 22px;
+}
+
+.panel,
+.timeline,
+.fixture-card,
+.jugador-card,
+.curiosidad-card {
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.22);
+}
+
+.panel {
+  padding: 28px;
+}
+
+.panel h3,
+.timeline h3 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.panel p {
+  color: #dce6ff;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.timeline {
+  padding: 28px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item:first-of-type {
+  border-top: none;
+}
+
+.timeline-item strong {
+  color: #ffcc18;
+  font-size: 1.15rem;
+}
+
+.timeline-item span {
+  color: #dce6ff;
+  line-height: 1.55;
+}
+
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.jugador-card {
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.jugador-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 204, 24, 0.16), transparent 45%);
+  pointer-events: none;
+}
+
+.jugador-card small {
+  position: relative;
+  color: #ffcc18;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.jugador-card h3 {
+  position: relative;
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.jugador-card p {
+  position: relative;
+  color: #dce6ff;
+  line-height: 1.6;
+}
+
+.fixtures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.fixture-card {
+  padding: 20px;
+}
+
+.fixture-card .fecha {
+  color: #ffcc18;
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fixture-card h3 {
+  margin: 12px 0;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.fixture-card p {
+  color: #cfd8ee;
+  font-size: 0.92rem;
+}
+
+.curiosidad-card {
+  padding: 26px;
+  border-left: 5px solid #ffcc18;
+}
+
+.curiosidad-card h3 {
+  color: #ffcc18;
+  margin-bottom: 10px;
+}
+
+.curiosidad-card p {
+  color: #dce6ff;
+  line-height: 1.7;
+}
+
+.navegacion-final {
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.navegacion-final a {
+  flex: 1;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: 0.25s ease;
+}
+
+.navegacion-final a:hover {
+  background: #ffcc18;
+  color: #06122c;
+  transform: translateY(-3px);
+}
+
+footer {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 26px 0 40px;
+  color: #9da9c4;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .equipo-nav,
+  .equipo-hero,
+  .grid-info {
+    grid-template-columns: 1fr;
+  }
+
+  .equipo-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .jugadores-grid,
+  .fixtures-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-info {
+    padding: 32px;
+  }
+
+  .ranking-card {
+    grid-template-columns: 1fr;
+  }
+
+  .navegacion-final {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-info h1 {
+    font-size: 3rem;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links a {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
