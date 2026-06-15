@@ -6,7 +6,9 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(rgba(15, 12, 41, 0.85), rgba(36, 36, 62, 0.9)),
+              url('../../images/fondo.png') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   min-height: 100vh;
 }
