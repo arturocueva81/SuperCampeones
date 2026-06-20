@@ -56,7 +56,7 @@
     },
     {
         id: "K",
-        carpeta: "grupo_K",
+        carpeta: "Grupo_K",
         paginaGrupo: "grupoK.html",
         paises: [
         { nombre: "PORTUGAL", pagina: "portugal.html", cod: "pt" },
