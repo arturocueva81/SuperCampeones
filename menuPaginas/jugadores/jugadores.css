@@ -126,3 +126,50 @@ header h1 {
   font-size: 1.1rem;
   padding: 40px;
 }
+
+.cromo-bloqueado img {
+    filter: grayscale(100%) blur(4px) brightness(0.15) contrast(1.2);
+}
+
+.btn-desbloquear {
+  margin-top: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+.btn-desbloquear:hover {
+  background-color: #ffd843;
+  transform: scale(1.02);
+
+}
+
+/* Opacidad extra a toda la tarjeta bloqueada para dar más efecto de "escondido" */
+.cromo-card.cromo-bloqueado {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes flash{
+    0%{opacity:0.5;}
+    50%{opacity:1;}
+    100%{opacity:1;}
+}
+
+.flash{
+    animation: flash 0.5s;
+}
+
+/* Oculta los textos dentro de las tarjetas bloqueadas */
+.cromo-bloqueado h3, 
+.cromo-bloqueado p {
+  filter: blur(6px); /* Difumina las letras por completo */
+  user-select: none; /* Evita que el usuario pueda seleccionar el texto para leerlo */
+  opacity: 0.3;      /* Lo vuelve casi invisible */
+}
