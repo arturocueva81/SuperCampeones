@@ -3,6 +3,7 @@ const TARJETAS = [
   { nombre: "Historia",  ruta: "menuPaginas/historia/historia.html",  lista: true  },
   { nombre: "Estadios",  ruta: "menuPaginas/estadios/estadios.html",  lista: false },
   { nombre: "Grupos",    ruta: "menuPaginas/grupos/grupos.html",    lista: true  },
+  { nombre: "Jugadores", ruta: "menuPaginas/jugadores/jugadores.html", lista: true  },
   { nombre: "Acerca de", ruta: "menuPaginas/acerca/acerca.html",    lista: false }
 ];
 
