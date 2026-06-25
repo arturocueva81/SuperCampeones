@@ -2,7 +2,19 @@
 const cromosMundial = [];
 
 //funcion constructora
-function crearJugador(id, nombre, pais, posicion, urlImagen, urlBandera, colorFondoHex, goles, partidos, destacado) {
+function crearJugador(
+    id,
+    nombre,
+    pais,
+    posicion,
+    urlImagen,
+    urlBandera,
+    colorFondoHex,
+    goles,
+    partidos,
+    destacado,
+    curiosidad = ""
+) {
     return {
         id,
         nombre,
@@ -15,11 +27,101 @@ function crearJugador(id, nombre, pais, posicion, urlImagen, urlBandera, colorFo
             goles,
             partidos
         },
-        destacado: Boolean(destacado)
+        destacado: Boolean(destacado),
+        curiosidad
     };
 }
 
-// cargar jugadores del estudiante B
+// cargar jugadores del estudiante B - Grupos A y B
+cromosMundial.push(
+
+    crearJugador(
+        1,
+        "Hirving Lozano",
+        "México",
+        "Delantero",
+        "img/lozano.jpg",
+        "img/banderaMexico.png",
+        "#006847",
+        16,
+        59,
+        true,
+        "Marcó el gol con el que México derrotó a Alemania en el Mundial de Rusia 2018."
+    ),
+
+    crearJugador(
+        2,
+        "Alphonso Davies",
+        "Canadá",
+        "Defensa",
+        "img/davies.jpg",
+        "img/banderaCanada.png",
+        "#D80621",
+        15,
+        58,
+        true,
+        "Marcó el primer gol de Canadá en la historia de los Mundiales."
+    ),
+
+    crearJugador(
+        3,
+        "Son Heung-min",
+        "Corea del Sur",
+        "Delantero",
+        "img/son.jpg",
+        "img/banderaCorea.png",
+        "#CD2E3A",
+        51,
+        130,
+        true,
+        "Ha sido capitán de Corea del Sur en varias competiciones internacionales."
+    ),
+
+    crearJugador(
+        4,
+        "Patrik Schick",
+        "República Checa",
+        "Delantero",
+        "img/schick.jpg",
+        "img/banderaRepublicaCheca.png",
+        "#D7141A",
+        26,
+        53,
+        false,
+        "Marcó uno de los goles desde mayor distancia en la historia de la Eurocopa."
+    ),
+
+    crearJugador(
+        5,
+        "Granit Xhaka",
+        "Suiza",
+        "Mediocampista",
+        "img/xhaka.jpg",
+        "img/banderaSuiza.png",
+        "#D52B1E",
+        14,
+        125,
+        true,
+        "Es uno de los jugadores con más partidos disputados en la historia de Suiza."
+    ),
+
+    crearJugador(
+        6,
+        "Akram Afif",
+        "Catar",
+        "Delantero",
+        "img/afif.jpg",
+        "img/banderaCatar.png",
+        "#8A1538",
+        30,
+        100,
+        false,
+        "Fue elegido mejor jugador y máximo goleador de la Copa Asiática 2023."
+    )
+
+);
+
+// cargar jugadores del estudiante c
 cromosMundial.push(
 
     crearJugador(
