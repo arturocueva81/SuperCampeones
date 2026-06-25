@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
 }
 
-/* Overlay oscuro sobre el fondo */
 body::before {
   content: '';
   position: fixed;
@@ -24,7 +23,7 @@ body::before {
   pointer-events: none;
 }
 
-header, main, footer {
+header, main, .grupos-section, footer {
   position: relative;
   z-index: 1;
 }
@@ -61,7 +60,7 @@ header h1 {
   color: #eee;
 }
 
-/* ---- MAIN ---- */
+/* ---- MAIN (3 tarjetas) ---- */
 main {
   padding: 30px 20px 40px;
   text-align: center;
@@ -75,12 +74,11 @@ main {
   margin-bottom: 30px;
 }
 
-/* Grid de 4 tarjetas */
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -91,12 +89,13 @@ main {
   padding: 28px 16px;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.3s, border-color 0.3s;
+  transition: transform 0.3s, border-color 0.3s, background 0.3s;
 }
 
 .nav-card:hover {
   transform: translateY(-6px);
   border-color: #f5c518;
+  background: rgba(245, 197, 24, 0.1);
 }
 
 .card-icon {
@@ -116,23 +115,129 @@ main {
   line-height: 1.4;
 }
 
+/* ---- SECCIÓN GRUPOS ---- */
+.grupos-section {
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.grupos-titulo {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5c518;
+  margin-bottom: 16px;
+}
+
+.grupos-descripcion {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #f5c518;
+  border-radius: 8px;
+  padding: 16px 24px;
+}
+
+.grupos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.grupo-card {
+  background: rgba(10, 25, 60, 0.75);
+  border: 1px solid rgba(26, 115, 232, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.grupo-card:hover {
+  transform: translateY(-8px);
+  border-color: #f5c518;
+  box-shadow: 0 8px 30px rgba(245, 197, 24, 0.25);
+}
+
+.grupo-header {
+  background: linear-gradient(135deg, #1a73e8, #0d47a1);
+  padding: 14px 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(245, 197, 24, 0.5);
+}
+
+.grupo-header a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.grupo-header a:hover {
+  color: #f5c518;
+}
+
+.grupo-equipos {
+  list-style: none;
+  padding: 8px 20px 16px;
+}
+
+.grupo-equipos li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grupo-equipos li:last-child {
+  border-bottom: none;
+}
+
+.grupo-equipos a {
+  color: #cce0ff;
+  text-decoration: none;
+  transition: color 0.2s, padding-left 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.grupo-equipos a:hover {
+  color: #f5c518;
+  padding-left: 6px;
+}
+
 /* ---- FOOTER ---- */
 footer {
   text-align: center;
   padding: 20px;
   color: #aaa;
   font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
-  .nav-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-grid { grid-template-columns: repeat(3, 1fr); }
+  .grupos-grid { grid-template-columns: repeat(2, 1fr); }
   .poster { width: 320px; }
   header h1 { font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
   .nav-grid { grid-template-columns: repeat(2, 1fr); }
+  .grupos-grid { grid-template-columns: 1fr; }
   header h1 { font-size: 1.4rem; }
   .nav-card p { display: none; }
 }
