@@ -1,80 +1,43 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
+/*Estructura visual de la tarjeta */
+.card-cromo {
+  /* Bordes redondeados */
+  border-radius: 16px; 
+  /* Sombra suave inicial*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  /* Estilos de espaciado y organizacin interna */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff; /* Texto*/
+  
+  /* CONEXIÓN DE LA ANIMACIÓN DE ENTRADA*/
+  animation: entradaCromo 0.6s ease-out forwards; 
+  /* Transicipon suave obligatoria para que el efecto Hover no sea brusco */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-#contenedor-album{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-
-    padding: 20px;
-
+/* animacion entrada con KEYFRAMES */
+@keyframes entradaCromo {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    
+  }
 }
 
-
-
-.cromo{
-
-    width: 220px;
-    border-radius: 15px;
-    padding: 15px;
-
-    color: white;
-
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
-
-}
-
-
-
-.cromo img{
-
-    width: 120px;
-    height: 120px;
-
-    object-fit: contain;
-
-    display: block;
-
-    margin: auto;
-
-}
-
-
-
-.cromo h3{
-
-    margin: 10px;
-
-}
-
-
-
-.destacado{
-
-    background-color: gold;
-
-    color:black;
-
-    padding: 5px 10px;
-
-    border-radius: 10px;
-
-}
-
-
-
-#total-goles{
-
-    margin-top: 30px;
-
-    font-size: 24px;
-
-    font-weight: bold;
-
+/* Efecto interactivo cuando el usuario pasa el cursor*/
+.card-cromo:hover {
+  transform: translateY(-5px) scale(1.02); 
+  
+  /* Intensificacion de sombra*/
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45); 
+  cursor: pointer; 
 }

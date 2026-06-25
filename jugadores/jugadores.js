@@ -109,7 +109,7 @@ function renderizarAlbum() {
 
     cromosMundial.forEach(function(jugador) {
         const tarjeta = `
-            <div class="cromo" style="background-color: ${jugador.colorFondoHex}">
+            <div class="card-cromo" style="background-color: ${jugador.colorFondoHex}">
                 <img src="${jugador.urlBandera}" alt="Bandera ${jugador.pais}">
                 <img src="${jugador.urlImagen}" alt="${jugador.nombre}">
                 <h3>${jugador.nombre}</h3>
