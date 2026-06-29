@@ -129,6 +129,9 @@ function mostrarCromos(listaJugadores) {
     // Si está bloqueado, le añadimos tu clase CSS especial
     if (!jugador.desbloqueado) {
       tarjeta.classList.add("cromo-bloqueado");
+    } else {
+      // Si ya está desbloqueado, le ponemos una clase de éxito activa
+      tarjeta.classList.add("cromo-desbloqueado-anim");
     }
 
     tarjeta.innerHTML = `
@@ -160,9 +163,29 @@ window.desbloquearCromo = function(nombreJugador) {
     actualizarContador();
     filtrarAlbum();
     
-    // Opcional: Aquí podrías meter más adelante una alerta o llamar al sistema de animaciones.
-    alert(`¡Has desbloqueado a ${nombreJugador}! 🎉`);
+    // --- SISTEMA DE ANIMACIONES Y RECOMPENSAS INTEGRADO ---
+    lanzarAnimacionRecompensa(nombreJugador);
   }
+}
+
+// NUEVA: Función encargada de la recompensa visual y efectos
+function lanzarAnimacionRecompensa(nombreJugador) {
+  // 1. Crear contenedor de efectos/confeti en el DOM
+  const efectoContainer = document.createElement("div");
+  efectoContainer.className = "efecto-recompensa-overlay";
+  efectoContainer.innerHTML = `
+    <div class="modal-recompensa-contenido">
+      <h2>¡RECOMPENSA DESBLOQUEADA! 🎉</h2>
+      <p>Has conseguido el cromo de <strong>${nombreJugador}</strong></p>
+    </div>
+  `;
+  document.body.appendChild(efectoContainer);
+
+  // 2. Remover el efecto después de 2.5 segundos (lo que dura la animación)
+  setTimeout(() => {
+    efectoContainer.classList.add("fade-out");
+    setTimeout(() => efectoContainer.remove(), 500);
+  }, 2500);
 }
 
 // 6. Función principal de filtrado combinado
