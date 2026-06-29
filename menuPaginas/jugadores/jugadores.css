@@ -173,3 +173,19 @@ header h1 {
   user-select: none; /* Evita que el usuario pueda seleccionar el texto para leerlo */
   opacity: 0.3;      /* Lo vuelve casi invisible */
 }
+
+.btn-volver{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+
+.btn-volver:hover{
+    background: #f5c518;
+    color: black;
+}
