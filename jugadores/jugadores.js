@@ -42,7 +42,7 @@ cromosMundial.push(
         "Delantero",
         "img/lozano.jpg",
         "img/banderaMexico.png",
-        "#006847",
+        "#01a16f",
         16,
         59,
         true,
@@ -205,11 +205,11 @@ cromosMundial.push(
 );
 
 //funcion de renderizado inicial
-function renderizarAlbum() {
+function renderizarAlbum(lista = cromosMundial) {
     const contenedor = document.getElementById("contenedor-album");
     contenedor.innerHTML = "";
 
-    cromosMundial.forEach(function(jugador) {
+    lista.forEach(function(jugador) {
         const tarjeta = `
             <div class="card-cromo" style="background-color: ${jugador.colorFondoHex}">
                 <img src="${jugador.urlBandera}" alt="Bandera ${jugador.pais}">
@@ -227,3 +227,21 @@ function renderizarAlbum() {
 }
 
 renderizarAlbum();
+
+// Filtro por nombre - Estudiante E
+document.getElementById("buscador").addEventListener("input", function() {
+    const texto = this.value.toLowerCase();
+    const filtrados = cromosMundial.filter(j =>
+        j.nombre.toLowerCase().startsWith(texto)
+    );
+    renderizarAlbum(filtrados);
+});
+
+// Filtro por país - Estudiante E
+document.getElementById("filtroPais").addEventListener("change", function() {
+    const pais = this.value;
+    const filtrados = pais
+        ? cromosMundial.filter(j => j.pais === pais)
+        : cromosMundial;
+    renderizarAlbum(filtrados);
+});
