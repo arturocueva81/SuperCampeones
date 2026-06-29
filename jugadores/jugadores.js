@@ -1,5 +1,5 @@
 //arreglo global vacio
-const cromosMundial = [];
+const CROMOSMUNDIAL = [];
 
 //funcion constructora
 function crearJugador(
