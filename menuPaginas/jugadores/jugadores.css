@@ -1,0 +1,191 @@
+/* ---- ESTILOS GENERALES ---- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../../images/fondo.png'); /* Sube dos niveles para encontrar la carpeta images */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Capa oscura de fondo para asegurar el contraste */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+  pointer-events: none;
+}
+
+header, main {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  color: #f5c518; /* Amarillo/Dorado oficial de tu proyecto */
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+/* ---- SECCIÓN DE FILTROS (BARRA SUPERIOR) ---- */
+.filtros-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.filtros-container input,
+.filtros-container select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo interactivo cuando haces clic en el buscador o selector */
+.filtros-container input:focus,
+.filtros-container select:focus {
+  border-color: #f5c518;
+  box-shadow: 0 0 8px rgba(245, 197, 24, 0.4);
+}
+
+.filtros-container select option {
+  background: #1a1a1a; /* Fondo oscuro para las opciones del menú desplegable */
+  color: #fff;
+}
+
+/* ---- REJILLA DEL ÁLBUM (TARJETAS) ---- */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* Estilo de cada cromo/tarjeta */
+.cromo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.cromo-card:hover {
+  transform: translateY(-5px);
+  border-color: #f5c518;
+  box-shadow: 0 6px 20px rgba(245, 197, 24, 0.2);
+}
+
+.cromo-pais {
+  display: inline-block;
+  background: rgba(245, 197, 24, 0.2);
+  color: #f5c518;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.cromo-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.cromo-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  color: #aaa;
+  font-size: 1.1rem;
+  padding: 40px;
+}
+
+.cromo-bloqueado img {
+    filter: grayscale(100%) blur(4px) brightness(0.15) contrast(1.2);
+}
+
+.btn-desbloquear {
+  margin-top: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+.btn-desbloquear:hover {
+  background-color: #ffd843;
+  transform: scale(1.02);
+
+}
+
+/* Opacidad extra a toda la tarjeta bloqueada para dar más efecto de "escondido" */
+.cromo-card.cromo-bloqueado {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes flash{
+    0%{opacity:0.5;}
+    50%{opacity:1;}
+    100%{opacity:1;}
+}
+
+.flash{
+    animation: flash 0.5s;
+}
+
+/* Oculta los textos dentro de las tarjetas bloqueadas */
+.cromo-bloqueado h3, 
+.cromo-bloqueado p {
+  filter: blur(6px); /* Difumina las letras por completo */
+  user-select: none; /* Evita que el usuario pueda seleccionar el texto para leerlo */
+  opacity: 0.3;      /* Lo vuelve casi invisible */
+}
+
+.btn-volver{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+
+.btn-volver:hover{
+    background: #f5c518;
+    color: black;
+}

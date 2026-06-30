@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbum de Jugadores - Francia, Senegal, Irak, Noruega</title>
+  <link rel="stylesheet" href="jugadores.css">
+</head>
+<body>
+
+  <header>
+      <a href="../../index.html" class="btn-volver">← Volver al inicio</a>
+
+    <h1>📋 Álbum de Jugadores</h1>
+    <p id="contador-cromos">Cromos desbloqueados: 0%</p>
+    
+  </header>
+
+  <main>
+    <section class="filtros-container">
+      <input type="text" id="buscador-nombre" placeholder="Buscar jugador por nombre...">
+      
+      <select id="filtrar-pais">
+        <option value="todos">Todos los países</option>
+        <option value="México">México</option>
+        <option value="Sudáfrica">Sudáfrica</option>
+        <option value="Corea del Sur">Corea del Sur</option>
+        <option value="República Checa">República Checa</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Curazao">Curazao</option>
+        <option value="Costa de Marfil">Costa de Marfil</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Argelia">Argelia</option>
+        <option value="Australia">Australia</option>
+        <option value="Jordania">Jordania</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Uzbekistán">Uzbekistán</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Marruecos">Marruecos</option>
+        <option value="Haití">Haití</option>
+        <option value="Escocia">Escocia</option>
+      </select>
+    </section>
+
+    <section id="contenedor-album" class="album-grid">
+      </section>
+  </main>
+
+  <script src="jugadores.js"></script>
+</body>
+</html>
